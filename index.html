@@ -1079,104 +1079,38 @@ background: linear-gradient(20deg, rgba(85, 170, 85, 1) 22%, rgba(255, 255, 255,
 #balloons {
   position: absolute;
   animation: balloons 20s;
-  margin-left: 15px;
+  left: 15px;
+  bottom: 0px;
+  opacity: 0;
+  z-index: 99;
 }
 @keyframes balloons {
   0% {
-    left: 15px;
     bottom: 0px;
-  }
-  10% {
-    left: 15px;
-    bottom: 100px;
-  }
-  20% {
-    left: 15px;
-    bottom: 200px;
-  }
-  30% {
-    left: 15px;
-    bottom: 300px;
-  }
-  40% {
-    left: 15px;
-    bottom: 400px;
-  }
-  50% {
-    left: 15px;
-    bottom: 500px;
-  }
-  60% {
-    left: 15px;
-    bottom: 600px;
-  }
-  70% {
-    left: 15px;
-    bottom: 700px;
-  }
-  80% {
-    left: 15px;
-    bottom: 800px;
-  }
-  90% {
-    left: 15px;
-    bottom: 900px;
+    opacity: 1;
   }
   100% {
-    left: 15px;
-    bottom: 1000px;
+    bottom: 100%;
+    opacity: 1;
   }
 }
 
 #balloons2 {
   position: absolute;
   animation: balloons2 20s;
-  margin-right: 15px;
+  right: 15px;
+  bottom: 0px;
+  opacity: 0;
+  z-index: 99;
 }
 @keyframes balloons2 {
- 0% {
-    right: 15px;
+  0% {
     bottom: 0px;
-  }
-  10% {
-    right: 15px;
-    bottom: 100px;
-  }
-  20% {
-    right: 15px;
-    bottom: 200px;
-  }
-  30% {
-    right: 15px;
-    bottom: 300px;
-  }
-  40% {
-    right: 15px;
-    bottom: 400px;
-  }
-  50% {
-    right: 15px;
-    bottom: 500px;
-  }
-  60% {
-    right: 15px;
-    bottom: 600px;
-  }
-  70% {
-    right: 15px;
-    bottom: 700px;
-  }
-  80% {
-    right: 15px;
-    bottom: 800px;
-  }
-  90% {
-    right: 15px;
-    bottom: 900px;
+    opacity: 1;
   }
   100% {
-    right: 15px;
-    bottom: 1000px;
+    bottom: 100%;
+    opacity: 1;
   }
 }
 </style>
