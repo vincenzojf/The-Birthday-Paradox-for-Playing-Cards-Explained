@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      <title>The Birthday Paradox For Playing Cards: Explained</title>
+      </head>
+    </html>
+
+    <a class="sr-only" href="#main">Skip to main content</a>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<audio id="audio" controls="" loop="">
+  <source src="Ievgen Poltavskyi Lounge Elevator Jazz.mp3" type="audio/mp3" />
+  <source src="Ievgen Poltavskyi Lounge Elevator Jazz.mpeg" type="audio/mpeg" />
+  Your browser does not support this audio element.
+  </audio>
+
+  <header>
+<div id="title" class="box">
+  <h1><em>The Birthday Paradox For Playing Cards: Explained</em></h1></div>
+</header>
+
+<main>
+  <h2><strong>There is a strange playing card phenomenon with no particular name that I found in an elusive magic trick book as a child. Some call it the two-card correlation phenomenon, while others call it the Birthday Paradox for playing cards.<br><br>
+    I will illustrate below.</strong></h2>
+
+  <h3><strong>Here is a sample of a shuffled deck:</strong></h3>
+  
+<!-- DECK ONE -->
+
+<button id="pause1" onclick="pauseAnimation()">Pause/Play Animation</button>
+<div id="box"></div>  
+
+<div id="shuffled1" class="container">
+
+<div id="JackOfDiamonds" class="box">
+<img src="jd.png"width="200" alt= "Jack of Diamonds"/></div>
+
+<div id="TenOfHearts" class="box">
+<img
+src="10h.png"width="200" alt= "10 of Hearts"/></div>
+
+<div id="TwoOfDiamonds" class="box">
+<img
+src="2d.png"width="200" alt= "2 of Diamonds"/></div>
+
+<div id="TwoOfSpades" class="box">
+<img
+src="2s.png"width="200" alt= "2 of Spades"/></div>
+
+<div id="ThreeOfClubs" class="box">
+<img
+src="3c.png"width="200" alt= "3 of Clubs"/></div>
+
+<div id="AceOfDiamonds" class="box">
+<img
+src="ad.png"width="200" alt= "Ace of Diamonds"/></div>
+
+<div id="SevenOfClubs" class="box">
+<img
+src="7c.png"width="200" alt= "7 of Clubs"/></div>
+</div>
+
+<h3><strong>Call out two values, such as 6 and 7. I have personally found that about half of the time, those two cards will be directly next to each other at least once as you spread through the deck:</strong></h3>
+  
+<!-- DECK TWO -->
+  
+<button id="pause2" onclick="pauseAnimation2()">Pause/Play Animation</button>
+<div id="box"></div>
+
+<div id="shuffled2" class="container">
+
+<div id="QueenOfSpades" class="box">
+<img src="qs.png"width="200" alt= "Queen of Spades"/></div>
+
+<div id="FiveOfClubs" class="box">
+<img
+src="5c.png"width="200" alt= "5 of Clubs"/></div>
+
+<div id="FourOfSpades" class="box">
+<img
+src="4s.png"width="200" alt= "4 of Spades"/></div>
+
+<div id="SixOfHearts" class="box">
+<img
+src="6h.png"width="200" alt= "6 of Hearts"/></div>
+
+<div id="SevenOfClubs2" class="box">
+<img
+src="7c.png"width="200" alt= "7 of Clubs"/></div>
+
+<div id="JackOfClubs" class="box">
+<img
+src="jc.png"width="200" alt= "Jack of Clubs"/></div>
+
+<div id="ThreeOfClubs2" class="box">
+<img
+src="3c.png"width="200" alt= "3 of Clubs"/></div>
+</div>
+
+<h3><strong>A bit more than half of the time, there will be exactly one card wedged in between:</strong></h3>
+  
+<!-- DECK THREE -->
+
+<button id="pause3" onclick="pauseAnimation3()">Pause/Play Animation</button>
+<div id="box"></div>
+
+<div id="shuffled3" class="container">
+
+<div id="TwoOfHearts" class="box">
+<img src="2h.png" width="200" alt= "2 of Hearts"/></div>
+
+<div id="AceOfClubs" class="box">
+<img
+src="ac.png"width="200" alt= "Ace of Clubs"/></div>
+
+<div id="SixOfHearts2" class="box">
+<img
+src="6h.png"width="200" alt= "6 of Hearts"/></div>
+
+<div id="EightOfSpades" class="box">
+<img
+src="8s.png"width="200" alt= "8 of Spades"/></div>
+
+<div id="SevenOfClubs3" class="box">
+<img
+src="7c.png"width="200" alt= "7 of Clubs"/></div>
+
+<div id="KingOfDiamonds" class="box">
+<img
+src="kd.png"width="200" alt= "King of Diamonds"/></div>
+
+<div id="FourOfHearts" class="box">
+<img
+src="4h.png"width="200" alt= "4 of Hearts"/></div>
+</div>
+
+<h3><strong>Weird, right? The phenomenon pulls from elements of multiple mathematical principles:</strong></h3>
+
+<div id="Birthday" class="box">
+  <h4><strong>Of course, this directly relates to the <u>Birthday Paradox</u>. This paradox proposes that there is a good chance that, in a group of at least 23 people, two of them will share a birthdate. <a href="https://www.csuohio.edu/sites/default/files/86B-2016.pdf" target="_blank">1</a></strong></h4></div>
+
+<div id="Gilbreath" class="box">
+  <h4><strong><u>Gilbreath's First Principle</u> states that after you have arranged the cards to alternate in color, cut it in half so that one pile has a black card at the bottom and the other has a red card at the bottom, replaced the cut, and given it a good riffle shuffle, when you alternately deal out the cards into two piles, they will still alternate between red and black. We learn from Gilbreath's First Principle that there is a great mathematical probability of any two given cards being next to one another, even if not specifically red and black in color. <a href="https://www.youtube.com/watch?v=J4bShnWnhD8" target="_blank">2</a> <a href="https://assets.press.princeton.edu/chapters/s5_9510.pdf" target="_blank">3</a></strong></h4></div>
+
+<div id="Poisson" class="box">
+  <h4><strong>The <u>Poisson clumping principle</u> contends that within randomness, events seem to appear in clusters by chance. <a href="https://www.stat.berkeley.edu/~aldous/157/Lectures/lecture_6.pdf" target="_blank">4</a></strong></h4></div>
+  
+<div id="TrulyLargeNumbers" class="box">
+  <h4><strong><u>The Law of Truly Large Numbers</u> concludes that with a large enough number of opportunities, coincidences, such as clumping, appear more common than you would think. <a href="https://doi.org/10.2307/2111360" target="_blank">5</a></strong></h4></div>
+
+<h3><strong>Now, go show your friends this mathematical magic trick and watch their reactions.</strong></h3>
+</main>
+
+<footer>
+<div id="sources" class="box">
+<h4><strong>Sources:</strong></h4>
+<ol>
+<li>https://www.csuohio.edu/sites/default/files/86B-2016.pdf</li>
+<li>https://www.youtube.com/watch?v=J4bShnWnhD8</li>
+<li>https://assets.press.princeton.edu/chapters/s5_9510.pdf</li>
+<li>https://www.stat.berkeley.edu/~aldous/157/Lectures/lecture_6.pdf</li>
+<li>https://doi.org/10.2307/2111360</li>
+  </ol></div>
+ 
+<div id="balloons" class="box">
+<img src="balloons green background.jpg"width="200" alt= "balloons"/></div>
+  
+<div id="balloons2" class="box">
+<img src="balloons green background.jpg"width="200" alt= "balloons"/></div>
+  
+  <p class="copyright">&copy; <strong>website designed by Vincenzo Joseph Frosolone, last updated 2 July 2026</strong></p>
+ </footer>
+<br>
+
+<style type="text/css">
+    .sr-only {
+	position: absolute;
+  left: -10000px;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.sr-only:focus {
+	position: static;
+  width: auto;
+  height: auto;
+}
+
+header {
+    background-color: #55aa55;
+    font-family: "Josefin Slab", serif;
+}
+
+main {
+  background-color: #55aa55;
+  font-family: "Josefin Slab", serif;
+}
+
+footer {
+  background-color: #55aa55;
+  font-family: "Josefin Slab", serif;
+}
+
+body {
+  background-color: #55aa55;
+  font-family: "Josefin Slab", serif;
+}
+
+.container {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.box {
+  text-align: center;
+}
+
+.copyright {
+    text-align: center;
+}
+
+#title {
+  background: linear-gradient(20deg, rgba(85, 152, 170, 1) 22%, rgba(255, 255, 255, 1) 100%);
+  display: inline-block;
+  border: 1px solid #5598aa;
+  border-radius: 3em;
+  padding: 0.5em;
+  margin: 0.75em;
+  text-shadow: 3px 2px 2px gray;
+  box-shadow: 3px 10px 10px black;
+  text-align: center;
+}
+
+#audio {
+background-color: black;
+}
+
+#sources {
+  text-align: center;
+}
+
+#shuffled1 {
+  position: relative;
+  height: 300px;
+}
+
+#shuffled2 {
+  position: relative;
+  height: 300px;
+}
+
+#shuffled3 {
+  position: relative;
+  height: 300px;
+}
+
+#pause1 {
+    background-color: black;
+    color: white;
+}
+
+#pause2 {
+    background-color: black;
+    color: white;
+}
+
+#pause3 {
+    background-color: black;
+    color: white;
+}
+
+ol {
+	display: inline-block;
+    font-weight: bold;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+/* DECK ONE */
+
+#JackOfDiamonds {
+  position: absolute;
+  animation: JackOfDiamonds 10s infinite;
+  margin-left: 10px;
+}
+@keyframes JackOfDiamonds {
+  0% {
+    left: 1000px;
+  }
+  25% {
+   	left: 750px;
+  }
+  33% {
+    left: 666px;
+  }
+  50% {
+    left: 500px;
+  }
+  66% {
+    left: 333px;
+  }
+  75% {
+    left: 250px;
+  }  
+  85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+#TenOfHearts {
+  position: absolute;
+  animation: TenOfHearts 10s infinite;
+  margin-left: 60px;
+}
+@keyframes TenOfHearts {
+  0% {
+    left: 1050px;
+  }
+  25% {
+   	left: 800px;
+  }
+  33% {
+    left: 716px;
+  }
+  50% {
+    left: 550px;
+  }
+  66% {
+    left: 383px;
+  }
+  75% {
+    left: 300px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 60px;
+  }
+}
+
+#TwoOfDiamonds {
+  position: absolute;
+  animation: TwoOfDiamonds 10s infinite;
+  margin-left: 110px;
+}
+@keyframes TwoOfDiamonds {
+  0% {
+    left: 1100px;
+  }
+  25% {
+   	left: 850px;
+  }
+  33% {
+    left: 766px;
+  }
+  50% {
+    left: 600px;
+  }
+  66% {
+    left: 433px;
+  }
+  75% {
+    left: 350px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 110px;
+  }
+}
+
+#TwoOfSpades {
+  position: absolute;
+  animation: TwoOfSpades 10s infinite;
+  margin-left: 160px;
+}
+@keyframes TwoOfSpades {
+  0% {
+    left: 1150px;
+  }
+  25% {
+   	left: 900px;
+  }
+  33% {
+    left: 816px;
+  }
+  50% {
+    left: 650px;
+  }
+  66% {
+    left: 483px;
+  }
+  75% {
+    left: 400px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 160px;
+  }
+}
+
+#ThreeOfClubs {
+  position: absolute;
+  animation: ThreeOfClubs 10s infinite;
+  margin-left: 210px;
+}
+@keyframes ThreeOfClubs {
+  0% {
+    left: 1200px;
+  }
+  25% {
+   	left: 950px;
+  }
+  33% {
+    left: 866px;
+  }
+  50% {
+    left: 700px;
+  }
+  66% {
+    left: 533px;
+  }
+  75% {
+    left: 450px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 210px;
+  }
+}
+
+#AceOfDiamonds {
+  position: absolute;
+  animation: AceOfDiamonds 10s infinite;
+  margin-left: 260px;
+}
+@keyframes AceOfDiamonds {
+  0% {
+    left: 1250px;
+  }
+  25% {
+   	left: 1000px;
+  }
+  33% {
+    left: 916px;
+  }
+  50% {
+    left: 750px;
+  }
+  66% {
+    left: 583px;
+  }
+  75% {
+    left: 500px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 260px;
+  }
+}
+
+#SevenOfClubs {
+  position: absolute;
+  animation: SevenOfClubs 10s infinite;
+  margin-left: 310px;
+}
+@keyframes SevenOfClubs {
+  0% {
+    left: 1300px;
+  }
+  25% {
+   	left: 1050px;
+  }
+  33% {
+    left: 966px;
+  }
+  50% {
+    left: 800px;
+  }
+  66% {
+    left: 633px;
+  }
+  75% {
+    left: 550px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 310px;
+  }
+}
+
+/* DECK TWO */
+
+#QueenOfSpades {
+  position: absolute;
+  animation: QueenOfSpades 10s infinite;
+  margin-left: 10px;
+}
+@keyframes QueenOfSpades {
+  0% {
+    left: 1000px;
+  }
+  25% {
+   	left: 750px;
+  }
+  33% {
+    left: 666px;
+  }
+  50% {
+    left: 500px;
+  }
+  66% {
+    left: 333px;
+  }
+  75% {
+    left: 250px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+#FiveOfClubs {
+  position: absolute;
+  animation: FiveOfClubs 10s infinite;
+  margin-left: 60px;
+}
+@keyframes FiveOfClubs {
+  0% {
+    left: 1050px;
+  }
+  25% {
+   	left: 800px;
+  }
+  33% {
+    left: 716px;
+  }
+  50% {
+    left: 550px;
+  }
+  66% {
+    left: 383px;
+  }
+  75% {
+    left: 300px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 60px;
+  }
+}
+
+#FourOfSpades {
+  position: absolute;
+  animation: FourOfSpades 10s infinite;
+  margin-left: 110px;
+}
+@keyframes FourOfSpades {
+  0% {
+    left: 1100px;
+  }
+  25% {
+   	left: 850px;
+  }
+  33% {
+    left: 766px;
+  }
+  50% {
+    left: 600px;
+  }
+  66% {
+    left: 433px;
+  }
+  75% {
+    left: 350px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 110px;
+  }
+}
+
+#SixOfHearts {
+  position: absolute;
+  animation: SixOfHearts 10s infinite;
+  margin-left: 160px;
+  img {
+    filter: sepia(100%) saturate(300%);
+  }
+}
+@keyframes SixOfHearts {
+  0% {
+    left: 1150px;
+  }
+  25% {
+   	left: 900px;
+  }
+  33% {
+    left: 816px;
+  }
+  50% {
+    left: 650px;
+  }
+  66% {
+    left: 483px;
+  }
+  75% {
+    left: 400px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 160px;
+  }
+}
+
+#SevenOfClubs2 {
+  position: absolute;
+  animation: SevenOfClubs2 10s infinite;
+  margin-left: 210px;
+  img {
+    filter: sepia(100%) saturate(300%);
+  }
+}
+@keyframes SevenOfClubs2 {
+  0% {
+    left: 1200px;
+  }
+  25% {
+   	left: 950px;
+  }
+  33% {
+    left: 866px;
+  }
+  50% {
+    left: 700px;
+  }
+  66% {
+    left: 533px;
+  }
+  75% {
+    left: 450px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 210px;
+  }
+}
+
+#JackOfClubs {
+  position: absolute;
+  animation: JackOfClubs 10s infinite;
+  margin-left: 260px;
+}
+@keyframes JackOfClubs {
+  0% {
+    left: 1250px;
+  }
+  25% {
+   	left: 1000px;
+  }
+  33% {
+    left: 916px;
+  }
+  50% {
+    left: 750px;
+  }
+  66% {
+    left: 583px;
+  }
+  75% {
+    left: 500px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 260px;
+  }
+}
+
+#ThreeOfClubs2 {
+  position: absolute;
+  animation: ThreeOfClubs2 10s infinite;
+  margin-left: 310px;
+}
+@keyframes ThreeOfClubs2 {
+  0% {
+    left: 1300px;
+  }
+  25% {
+   	left: 1050px;
+  }
+  33% {
+    left: 966px;
+  }
+  50% {
+    left: 800px;
+  }
+  66% {
+    left: 633px;
+  }
+  75% {
+    left: 550px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 310px;
+  }
+}
+
+/* DECK THREE */
+
+#TwoOfHearts {
+  position: absolute;
+  animation: TwoOfHearts 10s infinite;
+  margin-left: 10px;
+}
+@keyframes TwoOfHearts {
+  0% {
+    left: 1000px;
+  }
+  25% {
+   	left: 750px;
+  }
+  33% {
+    left: 666px;
+  }
+  50% {
+    left: 500px;
+  }
+  66% {
+    left: 333px;
+  }
+  75% {
+    left: 250px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+#AceOfClubs {
+  position: absolute;
+  animation: AceOfClubs 10s infinite;
+  margin-left: 60px;
+}
+@keyframes AceOfClubs {
+  0% {
+    left: 1050px;
+  }
+  25% {
+   	left: 800px;
+  }
+  33% {
+    left: 716px;
+  }
+  50% {
+    left: 550px;
+  }
+  66% {
+    left: 383px;
+  }
+  75% {
+    left: 300px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 60px;
+  }
+}
+
+#SixOfHearts2 {
+  position: absolute;
+  animation: SixOfHearts2 10s infinite;
+  margin-left: 110px;
+  img {
+    filter: sepia(100%) saturate(300%);
+  }
+}
+@keyframes SixOfHearts2 {
+  0% {
+    left: 1100px;
+  }
+  25% {
+   	left: 850px;
+  }
+  33% {
+    left: 766px;
+  }
+  50% {
+    left: 600px;
+  }
+  66% {
+    left: 433px;
+  }
+  75% {
+    left: 350px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 110px;
+  }
+}
+
+#EightOfSpades {
+  position: absolute;
+  animation: EightOfSpades 10s infinite;
+  margin-left: 160px;
+}
+@keyframes EightOfSpades {
+  0% {
+    left: 1150px;
+  }
+  25% {
+   	left: 900px;
+  }
+  33% {
+    left: 816px;
+  }
+  50% {
+    left: 650px;
+  }
+  66% {
+    left: 483px;
+  }
+  75% {
+    left: 400px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 160px;
+  }
+}
+
+#SevenOfClubs3 {
+  position: absolute;
+  animation: SevenOfClubs3 10s infinite;
+  margin-left: 210px;
+  img {
+    filter: sepia(100%) saturate(300%);
+  }
+}
+@keyframes SevenOfClubs3 {
+  0% {
+    left: 1200px;
+  }
+  25% {
+   	left: 950px;
+  }
+  33% {
+    left: 866px;
+  }
+  50% {
+    left: 700px;
+  }
+  66% {
+    left: 533px;
+  }
+  75% {
+    left: 450px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 210px;
+  }
+}
+
+#KingOfDiamonds {
+  position: absolute;
+  animation: KingOfDiamonds 10s infinite;
+  margin-left: 260px;
+}
+@keyframes KingOfDiamonds {
+  0% {
+    left: 1250px;
+  }
+  25% {
+   	left: 1000px;
+  }
+  33% {
+    left: 916px;
+  }
+  50% {
+    left: 750px;
+  }
+  66% {
+    left: 583px;
+  }
+  75% {
+    left: 500px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 260px;
+  }
+}
+
+#FourOfHearts {
+  position: absolute;
+  animation: FourOfHearts 10s infinite;
+  margin-left: 310px;
+}
+@keyframes FourOfHearts {
+  0% {
+    left: 1300px;
+  }
+  25% {
+   	left: 1050px;
+  }
+  33% {
+    left: 966px;
+  }
+  50% {
+    left: 800px;
+  }
+  66% {
+    left: 633px;
+  }
+  75% {
+    left: 550px;
+  }  
+    85% {
+    left: 100px;
+  }
+  95% {
+    left: 50px;
+  }
+  100% {
+    left: 310px;
+  }
+}
+
+#Birthday {
+  border: 2px solid #e31414;
+  background: #e31414;
+background: linear-gradient(20deg, rgba(227, 20, 20, 1) 22%, rgba(255, 245, 245, 1) 100%);
+}
+
+#Gilbreath {
+  border: 2px solid #e38914;
+  background: #e38914;
+background: linear-gradient(20deg,rgba(227, 137, 20, 1) 22%, rgba(255, 245, 245, 1) 100%);
+}
+
+#Poisson {
+  border: 2px solid #e3d914;
+  background: #e3d914;
+background: linear-gradient(20deg, rgba(227, 217, 20, 1) 22%, rgba(255, 245, 245, 1) 100%);
+}
+
+#TrulyLargeNumbers {
+  border: 2px solid #77c977;
+  background: #55AA55;
+background: linear-gradient(20deg, rgba(85, 170, 85, 1) 22%, rgba(255, 255, 255, 1) 100%);
+}
+
+#balloons {
+  position: absolute;
+  animation: balloons 20s;
+  margin-left: 15px;
+}
+@keyframes balloons {
+  0% {
+    left: 15px;
+    bottom: 0px;
+  }
+  10% {
+    left: 15px;
+    bottom: 100px;
+  }
+  20% {
+    left: 15px;
+    bottom: 200px;
+  }
+  30% {
+    left: 15px;
+    bottom: 300px;
+  }
+  40% {
+    left: 15px;
+    bottom: 400px;
+  }
+  50% {
+    left: 15px;
+    bottom: 500px;
+  }
+  60% {
+    left: 15px;
+    bottom: 600px;
+  }
+  70% {
+    left: 15px;
+    bottom: 700px;
+  }
+  80% {
+    left: 15px;
+    bottom: 800px;
+  }
+  90% {
+    left: 15px;
+    bottom: 900px;
+  }
+  100% {
+    left: 15px;
+    bottom: 1000px;
+  }
+}
+
+#balloons2 {
+  position: absolute;
+  animation: balloons2 20s;
+  margin-right: 15px;
+}
+@keyframes balloons2 {
+ 0% {
+    right: 15px;
+    bottom: 0px;
+  }
+  10% {
+    right: 15px;
+    bottom: 100px;
+  }
+  20% {
+    right: 15px;
+    bottom: 200px;
+  }
+  30% {
+    right: 15px;
+    bottom: 300px;
+  }
+  40% {
+    right: 15px;
+    bottom: 400px;
+  }
+  50% {
+    right: 15px;
+    bottom: 500px;
+  }
+  60% {
+    right: 15px;
+    bottom: 600px;
+  }
+  70% {
+    right: 15px;
+    bottom: 700px;
+  }
+  80% {
+    right: 15px;
+    bottom: 800px;
+  }
+  90% {
+    right: 15px;
+    bottom: 900px;
+  }
+  100% {
+    right: 15px;
+    bottom: 1000px;
+  }
+}
+</style>
+
+<script>
+  //DECK ONE
+let playstate1 = 0;
+function pauseAnimation() {
+if(playstate1 == 0) {
+document.getElementById("JackOfDiamonds").style.animationPlayState="paused";
+document.getElementById("TenOfHearts").style.animationPlayState="paused";
+document.getElementById("TwoOfDiamonds").style.animationPlayState="paused";
+document.getElementById("TwoOfSpades").style.animationPlayState="paused";
+document.getElementById("ThreeOfClubs").style.animationPlayState="paused";
+document.getElementById("AceOfDiamonds").style.animationPlayState="paused";
+document.getElementById("SevenOfClubs").style.animationPlayState="paused";
+playstate1 = 1;
+
+} else {
+    document.getElementById("JackOfDiamonds").style.animationPlayState="running";
+    document.getElementById("TenOfHearts").style.animationPlayState="running";
+    document.getElementById("TwoOfDiamonds").style.animationPlayState="running";
+    document.getElementById("TwoOfSpades").style.animationPlayState="running";
+    document.getElementById("ThreeOfClubs").style.animationPlayState="running";
+    document.getElementById("AceOfDiamonds").style.animationPlayState="running";
+    document.getElementById("SevenOfClubs").style.animationPlayState="running";
+playstate1 = 0;
+}
+}
+
+//DECK TWO
+let playstate2 = 0;
+function pauseAnimation2() {
+if(playstate2 == 0) {
+document.getElementById("QueenOfSpades").style.animationPlayState="paused";
+document.getElementById("FiveOfClubs").style.animationPlayState="paused";
+document.getElementById("FourOfSpades").style.animationPlayState="paused";
+document.getElementById("SixOfHearts").style.animationPlayState="paused";
+document.getElementById("SevenOfClubs2").style.animationPlayState="paused";
+document.getElementById("JackOfClubs").style.animationPlayState="paused";
+document.getElementById("ThreeOfClubs2").style.animationPlayState="paused";
+playstate2 = 1;
+
+} else {
+    document.getElementById("QueenOfSpades").style.animationPlayState="running";
+    document.getElementById("FiveOfClubs").style.animationPlayState="running";
+    document.getElementById("FourOfSpades").style.animationPlayState="running";
+    document.getElementById("SixOfHearts").style.animationPlayState="running";
+    document.getElementById("SevenOfClubs2").style.animationPlayState="running";
+    document.getElementById("JackOfClubs").style.animationPlayState="running";
+    document.getElementById("ThreeOfClubs2").style.animationPlayState="running";
+playstate2 = 0;
+}
+}
+
+//DECK THREE
+let playstate3 = 0;
+function pauseAnimation3() {
+if(playstate3 == 0) {
+document.getElementById("TwoOfHearts").style.animationPlayState="paused";
+document.getElementById("AceOfClubs").style.animationPlayState="paused";
+document.getElementById("SixOfHearts2").style.animationPlayState="paused";
+document.getElementById("EightOfSpades").style.animationPlayState="paused";
+document.getElementById("SevenOfClubs3").style.animationPlayState="paused";
+document.getElementById("KingOfDiamonds").style.animationPlayState="paused";
+document.getElementById("FourOfHearts").style.animationPlayState="paused";
+playstate3 = 1;
+
+} else {
+    document.getElementById("TwoOfHearts").style.animationPlayState="running";
+    document.getElementById("AceOfClubs").style.animationPlayState="running";
+    document.getElementById("SixOfHearts2").style.animationPlayState="running";
+    document.getElementById("EightOfSpades").style.animationPlayState="running";
+    document.getElementById("SevenOfClubs3").style.animationPlayState="running";
+    document.getElementById("KingOfDiamonds").style.animationPlayState="running";
+    document.getElementById("FourOfHearts").style.animationPlayState="running";
+playstate3 = 0;
+}
+}
+</script>
